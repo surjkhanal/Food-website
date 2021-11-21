@@ -1,50 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>FoodAPI</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FoodAPI</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <header>
-    <a id="logo" href="./index.html"> Rasoi Secret</a>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./index.html">Latest Recipes</a>
-      <a href="./index.html">Recipe of the day</a>
-    </nav>
+    <header>
+        <a id="logo" href="./index.html"> Rasoi Secret</a>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./day.html">Recipe of the day</a>
+        </nav>
 
-  </header>
-  <main>
-    <div id="feature">
-      <div class="feature-img">
-        <img src="./image/Poke bowl-pana.svg" alt="" srcset="">
-      </div>
-      <div class="feature-txt">
-        <h1>Prepare delcious food at your own</h1>
-        <p>Lorem ipsum pakao khao</p>
-        <a href="#search" id="go-to-search">Search</a>
+    </header>
+    <main>
+        <div id="feature">
+            <div class="feature-img">
+                <img src="./image/Poke bowl-pana.svg" alt="food img">
+            </div>
+            <div class="feature-txt">
+                <h1>Prepare delcious food at your own</h1>
+                <p>Lorem ipsum pakao khao</p>
+                <a href="#search" id="go-to-search">Search</a>
 
-      </div>
-    </div>
-    <div id="search">
-      <form id="search-form-body">
-        <input name="search-txt" type="text" placeholder="search food by name">
-        <input style="display:none" type="submit" value="Check">
-      </form>
+            </div>
+        </div>
+        <div id="search">
+            <form id="search-form-body">
+                <input name="search-txt" id="search-txt" type="text" placeholder="Search food..." value="">
+                <input type="submit" value="Check">
+            </form>
 
-    </div>
-    <div id="result">
-      <h1>Result</h1>
+        </div>
+        <div id="result-conatiner">
+            <h1>All Foods</h1>
+            <div id="result">
+            </div>
 
-    </div>
+        </div>
 
 
-  </main>
-  <script src="script.js"></script>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

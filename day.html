@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>FoodAPI</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <a id="logo" href="./index.html"> Rasoi Secret</a>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./day.html">Recipe of the day</a>
+    </nav>
+
+  </header>
+  <main id="today">
+  </main>
+  <script>
+    console.log(window.location.href)
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+      .then((res) => res.json())
+      .then(data => {
+        let req = data['meals'][0]
+        console.log(req)
+        let tags = ''
+        if(req.strTags){
+          req.strTags.split(',').forEach((tag) => {
+            if(tag){
+              tags+=`<span class="tag">${tag}</span>`
+            }
+          })
+        }
+        let ing = ''
+
+        for (let i = 1; i <= 20; i++) {
+          let index1 = 'strIngredient'+i;
+          let index2 = 'strMeasure'+i;
+          if(req[index1]){
+            ing+=` <li>${req[index1]} : ${req[index2]} </li>`
+          }
+          else{
+            break;
+          }
+        }
+        
+        let block = document.querySelector('#today')
+        block.innerHTML = `
+      <div id="short">
+          <div id="img">
+              <img src=${req.strMealThumb} alt="">
+          </div>
+          <div id="info">
+              <h1>${req.strMeal}</h1>
+              <span id="tags">
+                ${tags}
+              </span>
+              <br>
+              <span id="area">${req.strArea}</span> 
+              <br>
+              
+              <h3>Ingredient</h3>
+              <ul>
+                ${ing}
+              </ul>
+          </div>
+      </div>
+      <div id="long">
+          <p>${req.strInstructions}
+          </p>
+      </div>
+      `
+      })
+
+  </script>
+</body>
+
+</html>

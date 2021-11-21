@@ -97,14 +97,127 @@ header input{
     color: #FF725E;
     margin-top: 1.6em;
 }
+#search-form-body input[type="submit"]{
+    display:none;
+}
 
 /* Result */
 
-#result {
-    padding:2em;
+#result-conatiner {
+    padding:3em;
     height:100vh;
 }
-#result h1 {
+#result-conatiner h1 {
     text-align:center;
     color: #FF725E;
+}
+#result{
+    margin-top: 5em;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    padding:3em;
+}
+#result a{
+    display: inline-block;
+    text-decoration:none;
+    width: 15%;
+}
+
+
+.food-block{
+    background-color:  #FF725E;
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding:0.2em;
+    border-radius:8px;
+    font-size:1.5em;
+    color: #fff;
+
+    gap:5px;
+}
+.food-block span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.food-block img{
+    border-radius: 8px 8px 0 0;
+    background-size: cover;
+    width: 100%;
+}
+
+
+/* Today & FOOD */
+
+#today,
+#food{
+    padding:5em;
+}
+#short{
+    display:flex;
+    align-items: center;
+    gap: 2em;
+}
+#img,#info{
+    width:50%;
+}
+#img img{
+    /* width: 400px; */
+    max-width: 100%;
+}
+#info{
+    padding:1em;
+}
+#info h1{
+    font-size:3em;
+    margin:0.5em 0;
+}
+#info #tags::before{
+    content:"Tags:";
+    font-size:1.5em;
+
+}
+#info #tags{
+    margin-top: 5em;
+}
+#info .tag{
+    display:inline-block;
+    font-size:1.5em;
+    color: grey;
+    padding: 0.2em;
+    border: 2px solid grey;
+    border-radius:5px;
+    margin:0.2em;
+
+}
+#info #area::before{
+    content:"Country/Area:";
+    font-size:1em;
+    color:black;
+}
+#info #area{
+    display:inline-block;
+    font-size:2em;
+    color: grey;
+    margin-top: 1em;
+
+}
+#info ul {
+    margin:2em 0;
+}
+#info h3{
+    font-size:2em;
+    margin-top: 1em;
+}
+#info ul li{
+    margin-left: 2em;
+    font-size:1.2em;
+    margin-top: 0.3em;
+}
+
+#long p{
+    font-size:1.5em;
+    color: #222;
 }
