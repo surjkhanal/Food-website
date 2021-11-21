@@ -19,7 +19,7 @@ function showResults(data) {
 
     data['meals'].forEach(meal => {
         resultBlock.innerHTML += `
-        <a href="/food.html?foodId=${meal.idMeal}"> 
+        <a href="./food.html?foodId=${meal.idMeal}"> 
             <div class = "food-block" >
             <img src = ${meal.strMealThumb+ "/preview"} alt = "" >
         <span > ${meal.strMeal} </span></div ></a> `
