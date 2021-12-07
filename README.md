@@ -1,2 +1,2 @@
 # Food-website
-https://surjkhanal.github.io/Food-website/
+https://tosudh.github.io/Food-website/
